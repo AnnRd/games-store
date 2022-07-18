@@ -1,4 +1,5 @@
 import games from '../../gamesStore/games';
+import GameBuy from '../GameBuy/GameBuy';
 import GameCover from '../GameCover/GameCover';
 import './GameItem.scss';
 
@@ -11,7 +12,9 @@ function GameItem ({game}) {
                 <div className="game-genre">
                     {game.genres.map(genre => genre)}
                 </div>
-                <div className="game-button">Buy</div>
+                <div className="game-button">
+                    <GameBuy game={game}/>
+                </div>
             </div>
         </div>
     )
