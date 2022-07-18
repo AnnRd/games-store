@@ -1,5 +1,6 @@
 import './HomePage.scss';
 import games from '../../gamesStore/games';
+import GameItem from '../../components/GameItem/GameItem';
 
 function HomePage() {
     return (
