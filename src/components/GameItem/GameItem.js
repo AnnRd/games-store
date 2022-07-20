@@ -1,12 +1,23 @@
+//import { useHistory } from "react-router-dom";
+import { useDispatch } from 'react-redux';
 import games from '../../gamesStore/games';
 import GameBuy from '../GameBuy/GameBuy';
 import GameCover from '../GameCover/GameCover';
 import GameGenre from '../GameGenre/GameGenre';
+import { setCurrentGame } from "../../redux/games/reducer";
+
 import './GameItem.scss';
 
 function GameItem ({game}) {
+    //const history = useHistory();
+    const dispatch = useDispatch();
+
+    const handleClick = () => {
+        dispatch(setCurrentGame(game));
+        //history.push(`/app/${game.title}`);
+    }
     return (
-        <div className='game'>
+        <div className='game' onClick={handleClick}>
             <GameCover image={game.image}/>
             <div className="game-details">
                 <span className="game-title">{game.title}</span>
