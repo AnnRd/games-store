@@ -9,7 +9,7 @@ function OrderItem({game}) {
     const handleClick = () => {
         dispatch(deleteItemFromCart(game.id))
     }
-    
+
     return (
         <div className="order-item">
             <div className="order-item-cover">
@@ -22,7 +22,7 @@ function OrderItem({game}) {
                 <span>{game.price} ₽</span>
                 <AiOutlineCloseCircle
                     size={25}
-                    className="cart-itemdelete-icon"
+                    className="cart-item-delete-icon"
                     onClick={handleClick}
                 />
             </div>
