@@ -17,7 +17,7 @@ function OrderPage() {
             </div>
             <div className="order-page-right">
                 <div className="order-page-total-price">
-                    <span>{items?.length} товаров на сумму {calcTotalPrice(items)} ₽</span>
+                    <span>Количество товаров: {items?.length} <br /> Итоговая сумма: {calcTotalPrice(items)} ₽</span>
                 </div>
             </div>
         </div>
