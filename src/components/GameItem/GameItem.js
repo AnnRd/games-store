@@ -8,13 +8,16 @@ import { setCurrentGame } from "../../redux/games/reducer";
 import './GameItem.scss';
 
 function GameItem ({game}) {
+    // const history = useHistory();
     const navigate = useNavigate();
     const dispatch = useDispatch();
-
+    
     const handleClick = () => {
-        dispatch(setCurrentGame(game));
-        navigate(`app/${game.title}`);
-    }
+      dispatch(setCurrentGame(game));
+      navigate(`/app/${game.title}`)
+    //   history.push(`/app/${game.title}`);
+    };
+  
     return (
         <div className='game' onClick={handleClick}>
             <GameCover image={game.image}/>
